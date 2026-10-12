@@ -1,0 +1,8 @@
+{
+  "name": "Remix Martiqaad - Tigidhada \u0026 Munaasabadaha",
+  "description": "Madal casri ah oo loogu talagalay goosashada tigidhada xafladaha, shirarka iyo qabanqaabada aroosyada \u0026 hoolalka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme="gold"] {
+    /* Theme 1 (Default): "Dahab & Boqortooyo" - Royal Midnight Navy & Warm Amber Gold */
+    --bg-page: #faf9f6;
+    --bg-page-secondary: #f4f2eb;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #fcfbf9;
+    --bg-overlay: rgba(15, 23, 42, 0.75);
+
+    --border-subtle: #e7e5e4;
+    --border-card: #e7e5e4;
+    --border-accent: rgba(217, 119, 6, 0.35);
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
+    /* Primary Event Ticketing Accent: Warm Amber Gold */
+    --accent: #d97706;
+    --accent-hover: #b45309;
+    --accent-light: #fef3c7;
+    --accent-subtle: #fffbeb;
+    --accent-text: #0f172a;
+    --accent-border: #fcd34d;
+    --accent-glow: rgba(217, 119, 6, 0.22);
+
+    --navy-primary: #0f172a;
+    --navy-secondary: #1e293b;
+
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 16px 32px -4px rgba(217, 119, 6, 0.14), 0 4px 8px -2px rgba(15, 23, 42, 0.06);
+  }
+
+  [data-theme="emerald"] {
+    /* Theme 2: "Aroos & Barwaaqo" - Deep Emerald Green & Gold */
+    --bg-page: #f8faf8;
+    --bg-page-secondary: #f0fdf4;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f9fdfa;
+    --bg-overlay: rgba(6, 78, 59, 0.75);
+
+    --border-subtle: #e2e8f0;
+    --border-card: #e2e8f0;
+    --border-accent: rgba(5, 150, 105, 0.35);
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
+    --accent: #059669;
+    --accent-hover: #047857;
+    --accent-light: #d1fae5;
+    --accent-subtle: #ecfdf5;
+    --accent-text: #ffffff;
+    --accent-border: #6ee7b7;
+    --accent-glow: rgba(5, 150, 105, 0.22);
+
+    --navy-primary: #064e3b;
+    --navy-secondary: #065f46;
+
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 16px 32px -4px rgba(5, 150, 105, 0.16), 0 4px 8px -2px rgba(0, 0, 0, 0.06);
+  }
+
+  [data-theme="indigo"] {
+    /* Theme 3: "Casri & Xarrago" - Deep Indigo & Royal Sapphire */
+    --bg-page: #f8fafc;
+    --bg-page-secondary: #f1f5f9;
+    --bg-surface: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f8fafc;
+    --bg-overlay: rgba(15, 23, 42, 0.75);
+
+    --border-subtle: #e2e8f0;
+    --border-card: #e2e8f0;
+    --border-accent: rgba(79, 70, 229, 0.35);
+
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-light: #e0e7ff;
+    --accent-subtle: #eef2ff;
+    --accent-text: #ffffff;
+    --accent-border: #a5b4fc;
+    --accent-glow: rgba(79, 70, 229, 0.22);
+
+    --navy-primary: #0f172a;
+    --navy-secondary: #1e1b4b;
+
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 16px 32px -4px rgba(79, 70, 229, 0.16), 0 4px 8px -2px rgba(0, 0, 0, 0.06);
+  }
+
+  /* ========================================================== */
+  /* GLOBAL DARK MODE THEME STYLES (Ensuring high contrast & luxury) */
+  /* ========================================================== */
+  [data-mode="dark"],
+  .dark {
+    --bg-page: #0a0e17;
+    --bg-page-secondary: #0f1523;
+    --bg-surface: #121929;
+    --bg-card: #131b2e;
+    --bg-card-subtle: #0f1626;
+    --bg-overlay: rgba(5, 8, 15, 0.85);
+
+    --border-subtle: #1e293b;
+    --border-card: #1e293b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    --navy-primary: #0b0f19;
+    --navy-secondary: #141c2e;
+
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Dark mode specific accent calibrations for ultimate vibrancy */
+  [data-mode="dark"][data-theme="gold"],
+  .dark[data-theme="gold"],
+  [data-mode="dark"]:not([data-theme]),
+  .dark:not([data-theme]) {
+    --border-accent: rgba(245, 158, 11, 0.35);
+    --accent: #f59e0b;
+    --accent-hover: #fbbf24;
+    --accent-light: rgba(245, 158, 11, 0.16);
+    --accent-subtle: rgba(245, 158, 11, 0.08);
+    --accent-text: #090d16;
+    --accent-border: #f59e0b;
+    --accent-glow: rgba(245, 158, 11, 0.3);
+  }
+
+  [data-mode="dark"][data-theme="emerald"],
+  .dark[data-theme="emerald"] {
+    --border-accent: rgba(16, 185, 129, 0.35);
+    --accent: #10b981;
+    --accent-hover: #34d399;
+    --accent-light: rgba(16, 185, 129, 0.16);
+    --accent-subtle: rgba(16, 185, 129, 0.08);
+    --accent-text: #022c22;
+    --accent-border: #34d399;
+    --accent-glow: rgba(16, 185, 129, 0.3);
+  }
+
+  [data-mode="dark"][data-theme="indigo"],
+  .dark[data-theme="indigo"] {
+    --border-accent: rgba(99, 102, 241, 0.35);
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --accent-light: rgba(99, 102, 241, 0.16);
+    --accent-subtle: rgba(99, 102, 241, 0.08);
+    --accent-text: #ffffff;
+    --accent-border: #818cf8;
+    --accent-glow: rgba(99, 102, 241, 0.3);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .font-serif-luxury {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-page-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
